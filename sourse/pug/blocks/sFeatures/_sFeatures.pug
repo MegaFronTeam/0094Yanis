@@ -2,8 +2,30 @@ mixin sFeatures(data)
 	// start sFeatures
 	+b.SECTION.sFeatures.section#sFeatures&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sFeatures
-				
+			+icon('leaf')
+			+icon('leaf')
+			+icon('leaf')
+			+b.section-title
+				+img(src="img/tablet.png", alt="")
+				h3 Ключевые особенности
 			+e.row.row
+				- const wrapClass="col-md-6 col-xl-3"
+				+e.col(class= wrapClass)
+					+feature-item('1', 'Обрезиненная рукоятка', 'Обрезиненная рукоятка гарантирует крепкий хват и снижает скольжение руки при работе.')
+				+e.col(class= wrapClass)
+					+feature-item('2', 'Комфорт', 'Воздуходувка оснащена разборной выпускной трубой.')
+				+e.col(class= wrapClass)
+					+feature-item('3', 'Прорезиненные ножки', 'Предусмотрены прорезиненные ножки для установки на горизонтальных поверхностях.')
+				+e.col(class= wrapClass)
+					+feature-item('4', 'Мощный двигатель', 'Мощный 2-х тактный двигатель обеспечивает высокую производительность - 650 м3 воздуха в час.')
 	// end sFeatures
+
+
+mixin feature-item(i, t, p)
+	+b.feature-item
+		+e.img-wrap.bg-wrap
+			+img(`img/feature-item-${i}.png`, 'bg').img
+			+img('img/icon-plus.png').icon-plus
+		+e.caption
+			+e.title.fw-700!= t
+			+e.text!= p

@@ -3,6 +3,7 @@ extends ../layout/main.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
+include ../blocks/sCards/_sCards.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sFeatures/_sFeatures.pug
@@ -28,6 +29,7 @@ block pagecontent
 	+parts('header')
 	main
 		+headerBlock
+		+sCards
 		+sAbout
 		+sCatalog
 		+sProduct

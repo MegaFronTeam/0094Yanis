@@ -1,11 +1,13 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.img-wrap.bg-wrap
+			+img(`img/headerBlock-bg.png`, 'bg')
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.inner-wrapper
+				+b.section-title
+					h1 Садовая техника
+					.h3 для сада и огорода
+				p Современное оборудование для работы в саду и на дачном участке
+				+e.btn.btn.btn-primary подобрать технику
 	// end headerBlock

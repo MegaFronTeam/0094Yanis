@@ -2,14 +2,57 @@
 .sFeatures {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(112)};
 	
+  .container {
+    position: relative;
+  }
+
+  .icon-leaf {
+    color: $gray-500;
+    position: absolute;
+  }
+
+  .icon-leaf:first-child {
+    font-size: rem(200);
+    left: rem(-120);
+    bottom: 34%;
+  }
+
+  .icon-leaf:nth-child(2) {
+    font-size: rem(180);
+    left: 43%;
+    bottom: 46%;
+    transform: rotate(190deg);
+  }
+
+  .icon-leaf:nth-child(3) {
+    font-size: rem(100);
+    right: rem(-35);
+    bottom: 10%;
+    transform: rotate(300deg);
+  }
+
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
 	}
 	.section-title{
-		
+		display: flex;
+    align-items: flex-end;
+    gap: rem(20);
+    @include media-breakpoint-up(md) {
+      gap: rem(50);
+    }
+    img {
+      width: rem(100);
+      border-radius: 50%;
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 -4px 16px 0 rgba(0, 0, 0, 0.2);
+      @include media-breakpoint-up(md) {
+        width: rem(164);
+      }
+    }
 	}
 	&__col{
 		
@@ -17,6 +60,20 @@
 	&__item{
 		
 	}
+
+  h3 {
+    position: relative;
+    margin-bottom: rem(20);
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: rem(-12);
+      left: 0;
+      width: 150px;
+      height: rem(8);
+      background: $primary;
+    }
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -26,3 +83,51 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sFeatures
+
+
+.feature-item {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	&__img-wrap{
+		@include block(1, 1);
+    width: rem(180);
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(md) {
+      width: rem(230);
+    }
+
+    .img {
+      border-radius: $border-radius;
+      box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1), 0 -4px 30px 0 rgba(0, 0, 0, 0.1);
+    }
+	}
+
+	&__caption{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+    gap: rem(16);
+	}
+
+  &__title {
+    font-size: rem(18);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: $gray-600;
+  }
+
+  .icon-plus {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: $border-radius;
+    box-shadow: 0 6px 12px 0 rgba(228, 45, 36, 0.3);
+  }
+
+}

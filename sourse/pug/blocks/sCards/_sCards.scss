@@ -1,0 +1,87 @@
+// start .sCards
+.sCards {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	position: relative;
+  top: rem(-65);
+  background: black;
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+
+  &__cards-row {
+    // margin-bottom: rem(140);
+    --bs-gutter-y: #{rem(60)};
+  }
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCards
+
+
+.adv-card {
+  background: url('../img/card-bg.png') left/ cover;
+  background-repeat: no-repeat;
+  padding: rem(30);
+  border-radius: $border-radius;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  height: 100%;
+  @include media-breakpoint-up(sm) {
+    padding: rem(40) rem(50);
+  }
+
+  .icon {
+    fill: $gray-700;
+    font-size: rem(48);
+  }
+
+  .icon-grass {
+    position: absolute;
+    top: -70px;
+    left: 9%;
+    z-index: 0;
+    font-size: rem(74);
+    fill: $gray-500;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: rem(18);
+  }
+
+  &__description {
+    color: $gray-700;
+  }
+
+  &__number {
+    position: absolute;
+    right: 10%;
+    top: rem(-60);
+    font-family: 'Oswald';
+    font-weight: 600;
+    font-size: rem(80);
+    color: $primary;
+    text-shadow: 0 6px 12px 0 rgba(208, 25, 16, 0.3);
+  }
+}

@@ -12,20 +12,60 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
 }
+.icon-cheaper {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
+}
 .icon-check {
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
+}
+.icon-earth {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
 }
 .icon-fb {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-grass {
+	$h: 80;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(80 / #{$h} *1em );
+}
 .icon-instagram {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-leaf {
+	$h: 200;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(200 / #{$h} *1em );
+}
+.icon-line {
+	$h: 30;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(2 / #{$h} *1em );
+}
+.icon-phone {
+	$h: 32;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
+}
+.icon-plus {
+	$h: 40;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(40 / #{$h} *1em );
+}
+.icon-quality {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;

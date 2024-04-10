@@ -162,7 +162,9 @@ main{
 .fw-400 {
 	font-weight: 400;
 }
-
+.fw-700 {
+	font-weight: 700;
+}
 .fw-900 {
 	font-weight: 900;
 }
@@ -473,6 +475,9 @@ iframe {
 	}
 }
 
+h1, h2, .h2 {
+  text-transform: uppercase;
+}
 
 .btn-primary {
   --bs-btn-color: #{$white};
@@ -489,4 +494,9 @@ iframe {
   --bs-btn-disabled-color: #{$white};
   --bs-btn-disabled-bg: #e42d24;
   --bs-btn-disabled-border-color: #e42d24;
+  text-transform: uppercase;
+}
+
+.btn-link {
+  font-family: 'Open sans';
 }
