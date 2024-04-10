@@ -88,7 +88,9 @@
 
 .sCards2 {
 	--sPT: #{rem(25)};
+	--sPB: #{rem(50)};
   background: $dark;
+  position: static;
   .icon:not(.icon-grass) {
     display: none;
   }

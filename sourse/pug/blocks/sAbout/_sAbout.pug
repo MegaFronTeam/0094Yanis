@@ -1,7 +1,7 @@
 mixin sAbout(data)
 	// start sAbout
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
-		+e.img-wrap.bg-wrap
+		+e.img-wrap.bg-wrap.bg
 			+img(`img/about-bg.png`, 'bg')
 		.container
 			+e.descr-row.row
@@ -17,5 +17,20 @@ mixin sAbout(data)
 						h3 Садовая техника и аксессуары
 						p Мы производим востребованную и удобную в эксплуатации садовую технику, ориентируясь на требовательного потребителя, ценящего качество, удобство и сервис.
 						p Продукция под брендом Yanis, это качественная продукция, производимая на современных производственных линиях в разных странах. Персонал предприятий сертифицирован по международной системе качества и имеет ряд экспертных оценок от иностранных коллег.
-						//quality
 	// end sAbout
+
+mixin sAbout2(data)
+	// start sAbout
+	+b.SECTION.sAbout--footer.section#sAbout-2&attributes(attributes)
+		+e.img-wrap.bg-wrap.bg
+			+img(`img/about-bg-2.png`, 'bg')
+		.container
+			+e.row.row
+				+e.col.d-none.col-lg-4.d-lg-block
+					+e.img-wrap.bg-wrap.phone
+						+img("img/phone-bg.png", 'bg')
+				+e.col.col.col-lg-6
+					p Мы получаем сотни отзывов от наших клиентов с комментариями насколько легче стало жить и наслаждаться собственным домом, благодаря нашей технике
+					h3 Наслаждайтесь и вы, <br>остальное мы возьмем на себя
+				+e.col.col-auto.col-lg-2
+					+img(src="img/stars.png", alt="").img-stars
