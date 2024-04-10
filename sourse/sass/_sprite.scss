@@ -77,6 +77,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(48 / #{$h} *1em );
 }
+.icon-sunshine {
+	$h: 72;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(72 / #{$h} *1em );
+}
 .icon-telegram {
 	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -96,4 +101,39 @@
 	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(32 / #{$h} *1em );
+}
+.icon-wheat {
+	$h: 42;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(59 / #{$h} *1em );
+}
+.icon-work-1 {
+	$h: 56;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
+}
+.icon-work-2 {
+	$h: 56;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
+}
+.icon-work-3 {
+	$h: 56;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
+}
+.icon-work-4 {
+	$h: 56;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
+}
+.icon-work-5 {
+	$h: 56;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
+}
+.icon-work-6 {
+	$h: 56;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
 }

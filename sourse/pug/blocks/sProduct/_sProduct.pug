@@ -2,8 +2,61 @@ mixin sProduct(data)
 	// start sProduct
 	+b.SECTION.sProduct.section#sProduct&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sProduct
-				
+			+b.section-title
+				h2 Воздуходувки
 			+e.row.row
+				+e.col.col-lg-6
+					+e.img-wrap.bg-wrap
+						+img("img/product-1.png", 'bg')
+						+img(src="img/leafs-3.png", alt="").leafs-3
+				+e.col.col-lg-6
+					+e.content
+						+img(src="img/leafs.png", alt="").img
+						h3 Воздуходувка бензиновая Yanis AirStorm EB260B
+						ul
+							li Мощность двигателя: 1.1 л.с.
+							li Тип двигателя:Бензиновый 2Т
+							li Рабочий объём двигателя: 26 см3
+							li Вид топлива:Бензин АИ92 + масло в пропорции 1:50
+							li Ёмкость топливного бака: 0.5 л.
+						+e.descr #[span Yanis AirStorm EB260B] — предназначена для сдувания листьев с тротуаров, дорожек, газонов и очистки других поверхностей от мелкого мусора.Воздуходувка оборудована удобной ручкой и прорезиненными ножками для установки на любое покрытие. Мощный двухтактный двигатель позволяет добиться потока воздуха в 650 м3/ч.
+						+e.btn.btn.btn-primary заказать модель
 	// end sProduct
+
+mixin sProduct2(data)
+	// start sProduct
+	+b.SECTION.sProduct--work.section#sProduct2&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Мотоблоки
+				+icon('sunshine')
+			+e.row.row
+				+e.col.col-lg-6
+					+e.img-wrap.bg-wrap
+						+img("img/product-2.png", 'bg')
+				+e.col.col-lg-6
+					+e.content
+						h3 Мотоблок бензиновый<br>Yanis Angry II
+						ul
+							+icon('wheat')
+							+icon('wheat')
+							li Тип двигателя:Бензиновый 4Т
+							li Рекомендуемая площадь вспашки:20 соток
+							li Ширина обработки:1050 мм.
+							li Максимальная глубина вспашки:300 мм.
+							li Мощность двигателя:7 л.с.
+						+e.descr Мотоблок #[span Yanis Angry II] – обновлённая модель проверенной временем модели первого поколения. В новой модели обновился дизайн, установлен более мощный двигатель, обновленное более универсальное прицепное устройство, новые пневмоколёса и разборный приводной шкив.
+						+e.btn.btn.btn-primary заказать модель
+			+e.working
+				+workItem('1', 'Культивирование')
+				+workItem('2', 'Окучивание')
+				+workItem('3', 'Картофелевыкапование')
+				+workItem('4', 'Работа с плугом')
+				+workItem('5', 'Работа с тележкой')
+				+workItem('6', 'Работа с передним навесным оборудованием')
+	// end sProduct
+
+mixin workItem(icon, text)
+	+b.work-card
+		+icon(`work-${icon}`)
+		+e.text!= text

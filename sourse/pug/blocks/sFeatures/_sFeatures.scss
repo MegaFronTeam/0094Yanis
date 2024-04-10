@@ -3,6 +3,7 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(112)};
+  position: relative;
 	
   .container {
     position: relative;
@@ -84,6 +85,24 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sFeatures
+
+.black-bg {
+  --sPT: #{rem(110)};
+  --sTPB: #{rem(50)};
+  @include media-breakpoint-up(lg) {
+    --sPT: #{rem(0)};
+    --sTPB: #{rem(112)};
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: rem(51);
+    width: 100%;
+    background: $dark;
+  }
+}
 
 .shadow-item .feature-item__img-wrap .img {
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1), 0 -4px 30px 0 rgba(0, 0, 0, 0.1);
@@ -184,7 +203,7 @@
   }
 
   .swiper-slide {
-    max-width: rem(250);
+    max-width: rem(200);
     @include media-breakpoint-up(md) {
       max-width: rem(282);
     }
