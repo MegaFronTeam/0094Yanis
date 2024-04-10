@@ -61,6 +61,49 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
+  const sProductSlider = new Swiper('.slider-1 .sFeatures__swiper--js', {
+		spaceBetween: 5,
+		watchOverflow: true,
+		// spaceBetween: 0,
+		slidesPerView: "auto",
+		// freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		navigation: {
+			nextEl: '.slider-1 .swiper-button-next',
+			prevEl: '.slider-1 .swiper-button-prev',
+		},
+    breakpoints: {
+      992: {
+        spaceBetween: 30,
+      }
+    }
+	});
+
+  const sProductSlider2 = new Swiper('.slider-2 .sFeatures__swiper--js', {
+		spaceBetween: 5,
+		watchOverflow: true,
+		// spaceBetween: 0,
+		slidesPerView: "auto",
+		// freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		navigation: {
+			nextEl: '.slider-2 .swiper-button-next',
+			prevEl: '.slider-2 .swiper-button-prev',
+		},
+    breakpoints: {
+      992: {
+        spaceBetween: 30,
+      }
+    }
+	});
+
+
 	
 }
 if (document.readyState !== "loading") {

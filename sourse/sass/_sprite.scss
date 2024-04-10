@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.icon-arrow {
+	$h: 8;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(88 / #{$h} *1em );
+}
 .icon-basket {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

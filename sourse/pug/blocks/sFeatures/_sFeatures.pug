@@ -8,7 +8,7 @@ mixin sFeatures(data)
 			+b.section-title
 				+img(src="img/tablet.png", alt="")
 				h3 Ключевые особенности
-			+e.row.row
+			+e.row.row.shadow-item
 				- const wrapClass="col-md-6 col-xl-3"
 				+e.col(class= wrapClass)
 					+feature-item('1', 'Обрезиненная рукоятка', 'Обрезиненная рукоятка гарантирует крепкий хват и снижает скольжение руки при работе.')
@@ -20,7 +20,6 @@ mixin sFeatures(data)
 					+feature-item('4', 'Мощный двигатель', 'Мощный 2-х тактный двигатель обеспечивает высокую производительность - 650 м3 воздуха в час.')
 	// end sFeatures
 
-
 mixin feature-item(i, t, p)
 	+b.feature-item
 		+e.img-wrap.bg-wrap
@@ -29,3 +28,85 @@ mixin feature-item(i, t, p)
 		+e.caption
 			+e.title.fw-700!= t
 			+e.text!= p
+
+
+mixin feature-item-grass(i, t)
+	+b.feature-item
+		+e.img-wrap.bg-wrap
+			+img(`img/feature-item-${i}.png`, 'bg').img
+			+img('img/icon-plus.png').icon-plus
+			+icon(`grass`)
+		+e.caption
+			+e.title.fw-700!= t
+
+mixin sFeatures2(data)
+	// start sFeatures
+	+b.SECTION.sFeatures--slider.slider-1.section#sFeatures2&attributes(attributes)
+		.container
+			+b.section-title
+				.pagination
+					.swiper-button-prev
+						+icon('arrow')
+					+img(src="img/tablet.png", alt="")
+					.swiper-button-next
+						+icon('arrow')
+				h3 Ключевые особенности
+			+e.swiper--js
+				+e.row.swiper-wrapper
+					- const wrapClass="swiper-slide"
+					+e.col(class= wrapClass)
+						+feature-item-grass('5', 'Держатель смартфона')
+					+e.col(class= wrapClass)
+						+feature-item('6', 'Подстаканники на две бутылки воды')
+					+e.col(class= wrapClass)
+						+b.feature-item.right
+							+e.img-wrap.bg-wrap
+								+img(`img/feature-item-7.png`, 'bg').img
+								+img('img/icon-plus.png').icon-plus
+								+icon(`grass`)
+							+e.caption
+								+e.title.fw-700 Боковой выброс
+					+e.col(class= wrapClass)
+						+feature-item('8', 'Пластиковый травосборник')
+					+e.col(class= wrapClass)
+						+feature-item('9', 'Штуцер для мойки деки')
+					+e.col(class= wrapClass)
+						+feature-item-grass('10', 'Индикатор заполненности травосборника')
+					+e.col(class= wrapClass)
+						+feature-item('11', 'Складная рукоятка')
+	// end sFeatures
+
+mixin sFeatures3(data)
+	// start sFeatures
+	+b.SECTION.sFeatures--slider.slider-2.section#sFeatures3&attributes(attributes)
+		.container
+			+b.section-title
+				.pagination
+					.swiper-button-prev
+						+icon('arrow')
+					+img(src="img/tablet.png", alt="")
+					.swiper-button-next
+						+icon('arrow')
+				h3 Ключевые особенности
+			+e.swiper--js.shadow-item
+				+e.row.swiper-wrapper
+					- const wrapClass="swiper-slide"
+					+e.col(class= wrapClass)
+						+feature-item('12', 'Защита растений', 'Специальная скоба защищает растения от повреждений при скашивании травы.')
+					+e.col(class= wrapClass)
+						+feature-item('13', 'Удобство работы', 'Телескопическая штанга и эргономичная d-образная ручка обеспечивают удобство работы.')
+					+e.col(class= wrapClass)
+						+feature-item('14', 'Экологичность', 'Благодаря работе от аккумулятора модель отличается низким уровнем шума, отсутствием вредных выхлопов и независимостью от источников электропитания.')
+					+e.col(class= wrapClass)
+						+feature-item('15', 'Безопасность', 'Специальный кожух защищает пользователя от попадания скошенной травы и мелких камней.')
+					+e.col(class= wrapClass)
+						+feature-item('12', 'Защита растений', 'Специальная скоба защищает растения от повреждений при скашивании травы.')
+					+e.col(class= wrapClass)
+						+feature-item('13', 'Удобство работы', 'Телескопическая штанга и эргономичная d-образная ручка обеспечивают удобство работы.')
+					+e.col(class= wrapClass)
+						+feature-item('14', 'Экологичность', 'Благодаря работе от аккумулятора модель отличается низким уровнем шума, отсутствием вредных выхлопов и независимостью от источников электропитания.')
+					+e.col(class= wrapClass)
+						+feature-item('15', 'Безопасность', 'Специальный кожух защищает пользователя от попадания скошенной травы и мелких камней.')
+
+
+	// end sFeatures

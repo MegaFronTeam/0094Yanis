@@ -151,13 +151,19 @@
     width: rem(393);
     max-width: 100%;
   }
+  &::after {
+    content: none;
+  }
 
   .img-stars {
     width: rem(100);
-    padding: rem(10) ;
+    padding: rem(10);
+    position: relative;
+    @include media-breakpoint-up(lg) {
+    left: rem(-25);
+    }
     @include media-breakpoint-up(lg) {
       width: rem(120);
-      position: relative;
       top: rem(25);
       left: rem(-45);
     }
