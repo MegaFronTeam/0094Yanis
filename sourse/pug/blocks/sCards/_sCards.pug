@@ -18,3 +18,17 @@ mixin advCard(icon, title, descr, i)
 		+e.description!= descr
 		+icon(`grass`)
 		+e.number!= i
+
+mixin sCards2(data)
+	// start sCards
+	+b.SECTION.sCards2.section#sCards&attributes(attributes)
+		.container
+			h3 Благодаря нашей технике клиенты
+			+e.cards-row.row
+				+e.col.col-lg-4
+					+advCard('', 'Экономят более 200 часов', 'в год на уборке участка', '')
+				+e.col.col-lg-4
+					+advCard('', 'Добавляют эстетику', 'в свою жизнь, порядок и красоту', '')
+				+e.col.col-lg-4
+					+advCard('', 'Экономят силы и Энергию', 'которую можно направить то, что действительно важно', '')
+	// end sCards

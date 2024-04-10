@@ -1,12 +1,15 @@
 .footer {
-		
+	background: $dark;
+  color: $gray-400;
 	margin-top: auto;
-// --sPT: #{rem()};
-	// --sPB: #{rem()};
+  overflow: hidden;
+  --sPT: #{rem(37)};
+  --sPB: #{rem(37)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
+    align-items: center;
 
 	}
 	.section-title{
@@ -21,6 +24,97 @@
 	&__slide{
 		height: auto;
 	}
+
+  .logo {
+    max-width: rem(180);
+    @include media-breakpoint-up(lg) {
+      margin-left: rem(10);
+    }
+  }
+
+  .contacts {
+    p {
+      font-size: rem(12);
+      margin-bottom: rem(5);
+    }
+    @include media-breakpoint-up(lg) {
+      margin-left: rem(50);
+      margin-top: rem(15);
+    }
+  }
+
+  .socail-media {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    @include media-breakpoint-up(sm) {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  .socail-icons {
+    padding: rem(20);
+    position: relative;
+    z-index: 3;
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem(160);
+      height: rem(150);
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: $primary;
+      z-index: -1;
+      @include media-breakpoint-up(md) {
+        // height: rem(200);
+      }
+      @include media-breakpoint-up(lg) {
+        height: rem(200);
+      }
+    }
+    .icon {
+      fill: $white;
+    }
+  }
+
+  &__link {
+    color: $white;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: rem(16);
+    justify-content: flex-end;
+    &:not(:last-child) {
+      margin-bottom: rem(21);
+    }
+  }
+
+  &__phone {
+    display: inline-flex;
+    gap: rem(12);
+    align-items: center;
+    color: $white;
+    font-size: rem(24);
+    @include media-breakpoint-up(lg) {
+      margin-top: rem(10);
+    }
+    @include media-breakpoint-up(xxl) {
+      position: relative;
+      left: rem(80);
+    }
+    &:hover {
+      .icon {
+        fill: $primary;
+      }
+    }
+    .icon {
+      transition: inherit;
+      fill: $white;
+    }
+  }
+
 // 
 @include media-breakpoint-up(xl) {}
 

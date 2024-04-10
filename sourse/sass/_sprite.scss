@@ -57,6 +57,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(32 / #{$h} *1em );
 }
+.icon-phone-sm {
+	$h: 25;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-plus {
 	$h: 40;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -68,9 +73,9 @@
 	width: calc(48 / #{$h} *1em );
 }
 .icon-telegram {
-	$h: 16;
+	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(16 / #{$h} *1em );
+	width: calc(32 / #{$h} *1em );
 }
 .icon-viber {
 	$h: 16;
@@ -83,7 +88,7 @@
 	width: calc(24 / #{$h} *1em );
 }
 .icon-whatsapp {
-	$h: 16;
+	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(16 / #{$h} *1em );
+	width: calc(32 / #{$h} *1em );
 }

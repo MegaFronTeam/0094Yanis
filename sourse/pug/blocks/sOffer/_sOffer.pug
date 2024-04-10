@@ -2,8 +2,12 @@ mixin sOffer(data)
 	// start sOffer
 	+b.SECTION.sOffer.section#sOffer&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sOffer
-				
-			+e.row.row
+			+b.section-title
+				h2 Уникальное предложение
+				+e.sub-title для корпоративных клиентов
+			p Наш менеджер подберет лучший вариант садовой техники под ваши задачи и предложит уникальные условия покупки
+			+e.btn.btn.btn-primary ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+			+e.img-box
+				+e.img-wrap.bg-wrap
+					+img(`img/offer-bg.png`, 'bg')
 	// end sOffer
