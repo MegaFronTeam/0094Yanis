@@ -82,6 +82,27 @@ function eventHandler() {
     }
 	});
 
+  const swiperTabs1 = new Swiper('.tabs-slider--js1', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
+  const swiperTabs2 = new Swiper('.tabs-slider--js2', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
+  const swiperTabs3 = new Swiper('.tabs-slider--js3', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
+  const swiperTabs4 = new Swiper('.tabs-slider--js4', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
+
   const sProductSlider2 = new Swiper('.slider-2 .sFeatures__swiper--js', {
 		spaceBetween: 5,
 		watchOverflow: true,

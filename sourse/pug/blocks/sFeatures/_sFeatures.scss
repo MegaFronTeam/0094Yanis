@@ -4,7 +4,7 @@
 	// --sPB: #{rem()};
 	--sTPB: #{rem(112)};
   position: relative;
-	
+
   .container {
     position: relative;
   }
@@ -12,25 +12,26 @@
   .icon-leaf {
     color: $gray-500;
     position: absolute;
+    z-index: -1;
   }
 
   .icon-leaf:first-child {
     font-size: rem(200);
     left: rem(-120);
-    bottom: 34%;
+    top: rem(230);
   }
 
   .icon-leaf:nth-child(2) {
     font-size: rem(180);
     left: 43%;
-    bottom: 46%;
+    top: rem(180);
     transform: rotate(190deg);
   }
 
   .icon-leaf:nth-child(3) {
     font-size: rem(100);
     right: rem(-35);
-    bottom: 10%;
+    top: rem(500);
     transform: rotate(300deg);
   }
 
@@ -77,6 +78,80 @@
     }
   }
 
+  .tabs__caption {
+    margin-bottom: rem(15);
+  }
+
+  .tabs__btn {
+    width: max-content;
+    font-family: 'open sans';
+    padding: rem(10);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(24);
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      left: rem(10);
+      height: rem(3);
+      width: calc(100% - 20px);
+      background: transparent;
+      transition: all .3s;
+    }
+    &.active::after {
+      background: $primary;
+    }
+    &:hover::after {
+      background: $primary;
+    }
+  }
+
+  &__item-colored {
+    padding: rem(20);
+    color: $white;
+    background: $gray-800;
+    border-radius: $border-radius;
+    margin-bottom: rem(20);
+  }
+  &__item {
+    padding-left: rem(20);
+    &:not(.fw-700) {
+      padding-bottom: rem(55);
+      color: $gray-700;
+    }
+
+    &.fw-700 {
+      text-transform: uppercase;
+      span {
+        color: $primary;
+      }
+    }
+  }
+
+  &__content {
+    li {
+      color: $gray-700;
+      margin-left: rem(20);
+    }
+  }
+
+  .swiper {
+    margin: 0;
+  }
+
+  .features {
+    .row {
+      @include media-breakpoint-up(lg) {
+        --bs-gutter-x: #{rem(68)};
+        max-width: rem(1100);
+      }
+
+    }
+  }
+
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -101,6 +176,38 @@
     height: rem(51);
     width: 100%;
     background: $dark;
+  }
+}
+
+.feature-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(10);
+  flex-direction: column;
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  &__header {
+    color: $gray-600;
+  }
+
+  &__dash {
+    @include media-breakpoint-up(sm) {
+      flex: 1 0;
+      border-bottom: 1px dashed $gray-600;
+      height: 1em;
+      margin: 0 .4em;
+    }
+  }
+
+  &__span {
+    color: $gray-800;
+    // width: 30%;
+    @include media-breakpoint-up(sm) {
+      width: 27%;
+    }
   }
 }
 
@@ -175,34 +282,12 @@
   @include media-breakpoint-down(md) {
     --sTPB: #{rem(70)};
   }
-  .pagination {
-    display: flex;
-    gap: rem(16);
-    align-items: flex-end;
-    div {
-      padding: rem(32) 0;
-    }
-  }
-
-  .section-title {
-    @include media-breakpoint-up(md) {
-      gap: rem(60);
-    }
-    @include media-breakpoint-down(md) {
-    align-items: flex-start;
-    flex-direction: column-reverse;
-    }
-  }
-
-  // .img {
-  //   box-shadow: none;
-  // }
 
   .feature-item {
     max-width: rem(282);
   }
 
-  .swiper-slide {
+  .swiper-slide:not(.tabs__btn) {
     max-width: rem(200);
     @include media-breakpoint-up(md) {
       max-width: rem(282);
