@@ -77,6 +77,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(48 / #{$h} *1em );
 }
+.icon-snow {
+	$h: 117;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(103 / #{$h} *1em );
+}
 .icon-sunshine {
 	$h: 72;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -97,6 +102,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-warranty {
+	$h: 56;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
+}
 .icon-whatsapp {
 	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -106,6 +116,11 @@
 	$h: 42;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(59 / #{$h} *1em );
+}
+.icon-wheel {
+	$h: 56;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
 }
 .icon-work-1 {
 	$h: 56;

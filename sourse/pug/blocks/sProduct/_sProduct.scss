@@ -24,8 +24,11 @@
   }
 
   h2 {
-    position: relative;
     margin-bottom: 0;
+  }
+
+  .section-title {
+    position: relative;
     &::before {
       content: '';
       position: absolute;
@@ -165,7 +168,7 @@
     padding: 0 rem(30);
     gap: rem(20);
   }
-  
+
   @include media-breakpoint-up(md) {
     border-right: none;
   }
@@ -195,4 +198,112 @@
     color: $gray-600;
     max-width: rem(234);
   }
+}
+
+.sProduct {
+  &--white {
+	--sPB: #{rem(110)};
+    background: transparent;
+    .bg-wrap {
+      max-width: rem(420);
+      margin-top: 0;
+    }
+    .row {
+      align-items: center;
+    }
+    .section-title h2 {
+      color: $dark;
+    }
+    .sProduct__content {
+      background: $dark;
+      padding: rem(30);
+      border-radius: 30px;
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+      position: relative;
+      @include media-breakpoint-up(xl) {
+        border-radius: 30px 0 0 30px;
+        padding: rem(60);
+      }
+      &::before {
+        @include media-breakpoint-up(xl) {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: calc(100% - 1px);
+          width: 500px;
+          height: 100%;
+          background: inherit;
+          box-shadow: inherit;
+        }
+      }
+    }
+  }
+  .section-title {
+    &__sub-title {
+      font-size: rem(24);
+      text-transform: uppercase;
+      margin-bottom: rem(10);
+    }
+  }
+  &__colored {
+    background: $primary;
+    color: $white;
+    padding: rem(20);
+    border-radius: $border-radius;
+    max-width: rem(445);
+    margin-bottom: 0;
+    position: relative;
+  }
+  &__items-wrap {
+    display: flex;
+    gap: rem(10);
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+  }
+  &__price {
+    text-transform: uppercase;
+    color: $white;
+    font-size: rem(24);
+    margin-bottom: rem(10);
+  }
+
+  .icon-snow {
+    position: absolute;
+    right: 13%;
+    top: 20%;
+    max-width: rem(110);
+    z-index: 0;
+    fill: $gray-400;
+  }
+}
+
+.adv-item {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  @include media-breakpoint-up(sm) {
+    gap: rem(20);
+  }
+  &:first-child {
+    max-width: rem(222);
+  }
+  &:last-child {
+    max-width: rem(252);
+  }
+
+  .icon {
+    fill: $gray-400;
+    flex-shrink: 0;
+    font-size: rem(36);
+    @include media-breakpoint-up(md) {
+      font-size: rem(56);
+    }
+  }
+
+  &__text {
+    color: $gray-600;
+    max-width: rem(234);
+  }
+
 }

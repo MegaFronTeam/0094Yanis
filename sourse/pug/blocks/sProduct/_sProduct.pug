@@ -1,3 +1,8 @@
+mixin workItem(icon, text)
+	+b.work-card
+		+icon(`work-${icon}`)
+		+e.text!= text
+
 mixin sProduct(data)
 	// start sProduct
 	+b.SECTION.sProduct.section#sProduct&attributes(attributes)
@@ -56,7 +61,30 @@ mixin sProduct2(data)
 				+workItem('6', 'Работа с передним навесным оборудованием')
 	// end sProduct
 
-mixin workItem(icon, text)
-	+b.work-card
-		+icon(`work-${icon}`)
+mixin sProduct3(data)
+	// start sProduct
+	+b.SECTION.sProduct--white.section#sProduct3&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-xl-5
+					+b.section-title
+						+e.sub-title.fw-700 А также вы можете приобрести
+						h2 другую технику нашего бренда
+					+e.img-wrap.bg-wrap
+						+img("img/product-3.png", 'bg')
+				+e.col.col-xl-7
+					+e.content
+						+icon('snow').img
+						h3 Мощные снегоуборочные<br>машины Yanis
+						+e.colored Наш бренд насчитывает более 35 000 произведенных снегоуборщиков. Продаем наше оборудование более чем в 38 стран по всему миру.
+						+e.items-wrap
+							+advItem('warranty', 'Официальная гарантия - 3 года')
+							+advItem('wheel', 'Лучшая проходимость среди аналогов')
+						+e.item
+							+e.price.fw-700 От 36 990 руб
+							+e.descr Оборудование продается #[span напрямую с завода] без посредников и диллеров
+
+mixin advItem(icon, text)
+	+b.adv-item
+		+icon(`${icon}`)
 		+e.text!= text
