@@ -1,9 +1,35 @@
 mixin sAdvantages(data)
 	// start sAdvantages
-	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+	+b.SECTION.sAdvantages--slider.section#sAdvantages&attributes(attributes)
+		+e.img-wrap.bg-wrap.bg
+			+img(`img/advantages-bg.png`, 'bg')
 		.container
-			+b.section-title.text-center
-				h2 sAdvantages
-				
-			+e.row.row
+			+b.section-title
+				+e.wrap
+					h2 6 гарантий
+					+e.sub-title.fw-700 которые даем только мы
+				.sub-info Разрабатываем и постоянно модернизируем собственное оборудование
+			+e.swiper--js
+				+e.row.swiper-wrapper
+					- const wrapClass="swiper-slide"
+					+e.col(class= wrapClass)
+						+advantage-item('1', 'Быстрая доставка<br>в любую точку России', 'После заказа мы упакуем техникуи отправим транспортной компанией с паспортом и гарантийным сертификатом')
+					+e.col(class= wrapClass)
+						+advantage-item('2', 'Гарантия заводского<br>европейского качества', 'Благодаря полному циклу создания на современных производственных линиях мы гарантируем качество техники, которая прослужит вам долгие годы')
+					+e.col(class= wrapClass)
+						+advantage-item('3', 'Цена на 30% ниже - без посредников, напрямую с завода', 'Аналоги продаются через посредников, тем самым заводы удешевляют производство, экономя на комплектующих, а диллеры поднимают цену, не соответствующую ее качеству')
+					+e.col(class= wrapClass)
+						+advantage-item('4', 'Увеличенная гарантия<br>на эксплуатацию – 5 лет', 'Если в течение 5 лет техника сломается, вы можете отправить ее в наш сервисный центр (за наш счет) и мы бесплатно заменим сломанную деталь или пришлем вам новую технику')
+					+e.col(class= wrapClass)
+						+advantage-item('5', 'Увеличенная гарантия<br>на эксплуатацию – 5 лет', 'Если в течение 5 лет техника сломается, вы можете отправить ее в наш сервисный центр (за наш счет) и мы бесплатно заменим сломанную деталь или пришлем вам новую технику')
 	// end sAdvantages
+
+
+mixin advantage-item(i, t, p)
+	+b.advantage-item
+		+e.img-wrap.bg-wrap
+			+e.number!= `0${i}`
+			+img(`img/adv-item-${i}.png`, 'bg').img
+		+e.caption
+			+e.title.fw-700!= t
+			+e.text!= p

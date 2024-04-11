@@ -71,10 +71,10 @@ function eventHandler() {
 		touchRatio: 0.4,
 		slideToClickedSlide: true,
 		// freeModeMomentum: true,
-		navigation: {
-			nextEl: '.slider-1 .swiper-button-next',
-			prevEl: '.slider-1 .swiper-button-prev',
-		},
+		// navigation: {
+		// 	nextEl: '.slider-1 .swiper-button-next',
+		// 	prevEl: '.slider-1 .swiper-button-prev',
+		// },
     breakpoints: {
       992: {
         spaceBetween: 30,
@@ -113,10 +113,29 @@ function eventHandler() {
 		touchRatio: 0.4,
 		slideToClickedSlide: true,
 		// freeModeMomentum: true,
-		navigation: {
-			nextEl: '.slider-2 .swiper-button-next',
-			prevEl: '.slider-2 .swiper-button-prev',
-		},
+		// navigation: {
+		// 	nextEl: '.slider-2 .swiper-button-next',
+		// 	prevEl: '.slider-2 .swiper-button-prev',
+		// },
+    breakpoints: {
+      992: {
+        spaceBetween: 30,
+      }
+    }
+	});
+
+  
+  const sAdvantagesSlider = new Swiper('.sAdvantages__swiper--js', {
+		spaceBetween: 20,
+		watchOverflow: true,
+		loop: true,
+		// spaceBetween: 0,
+		slidesPerView: "auto",
+		// freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
     breakpoints: {
       992: {
         spaceBetween: 30,
