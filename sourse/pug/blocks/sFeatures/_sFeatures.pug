@@ -1,6 +1,6 @@
 mixin sFeatures(data)
 	// start sFeatures
-	+b.SECTION.sFeatures.black-bg.section#sFeatures&attributes(attributes)
+	+b.SECTION.sFeatures.section#sFeatures&attributes(attributes)
 		.container
 			+icon('leaf')
 			+icon('leaf')
@@ -63,11 +63,11 @@ mixin sFeatures(data)
 						+e.col(class= wrapClass)
 							+feature-item('1', 'Обрезиненная рукоятка', 'Обрезиненная рукоятка гарантирует крепкий хват и снижает скольжение руки при работе.')
 						+e.col(class= wrapClass)
-							+feature-item('2', 'Комфорт', 'Воздуходувка оснащена разборной выпускной трубой.')
+							+feature-item('3', 'Комфорт', 'Воздуходувка оснащена разборной выпускной трубой.')
 						+e.col(class= wrapClass)
-							+feature-item('3', 'Прорезиненные ножки', 'Предусмотрены прорезиненные ножки для установки на горизонтальных поверхностях.')
+							+feature-item('4', 'Прорезиненные ножки', 'Предусмотрены прорезиненные ножки для установки на горизонтальных поверхностях.')
 						+e.col(class= wrapClass)
-							+feature-item('4', 'Мощный двигатель', 'Мощный 2-х тактный двигатель обеспечивает высокую производительность - 650 м3 воздуха в час.')
+							+feature-item('2', 'Мощный двигатель', 'Мощный 2-х тактный двигатель обеспечивает высокую производительность - 650 м3 воздуха в час.')
 	// end sFeatures
 
 mixin feature-line(title, value)
@@ -255,7 +255,7 @@ mixin sFeatures3(data)
 
 mixin sFeatures4(data)
 	// start sFeatures
-	+b.SECTION.sFeatures--slider.black-bg.slider-2.section#sFeatures3&attributes(attributes)
+	+b.SECTION.sFeatures--slider.slider-2.section#sFeatures3&attributes(attributes)
 		.container
 			.tabs
 				+b.section-title

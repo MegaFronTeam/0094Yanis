@@ -27,7 +27,10 @@
       min-height: rem(600);
     }
     @include media-breakpoint-up(xl) {
-      min-height:auto;
+      min-height: auto;
+    }
+    @include media-breakpoint-up(xxl) {
+      min-height: rem(550);
     }
     &::after {
       content: '';
@@ -42,7 +45,7 @@
 
   .container {
     position: absolute;
-    top: 42%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;

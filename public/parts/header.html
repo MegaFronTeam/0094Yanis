@@ -3,27 +3,41 @@
 <header class="header" id="header">
 	<!-- start top-nav-->
 	<div class="top-nav block-with-lazy">
+		<div class="top-nav__img-wrap bg-wrap"><img class="object-fit-js img" src="img/header-bg.png" alt="" loading="lazy"/>
+		</div>
 		<div class="container">
 			<div class="top-nav__row row">
-				<div class="col-4"></div>
-				<div class="col order-lg-0 order-last">
+				<div class="col-auto"><img class="logo" src="img/logo-black.svg" alt="" loading="lazy"/>
+				</div>
+				<div class="col col-auto col-lg order-lg-0 order-last">
 					<div class="menu-mobile menu-mobile--js">
 						<div class="menu-mobile__inner">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 							</div>
 							<nav>
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Преимущества</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог продукции</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши гарантии</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Корпоративным клиентам</a></li>
 								</ul>
 							</nav>
+							<a class="top-nav__phone btn-link fw-700 d-lg-none" href="tel:+88003025648">
+								<svg class="icon icon-phone-sm ">
+									<use xlink:href="img/svg/sprite.svg#phone-sm"></use>
+								</svg>8-800-302-56-48
+							</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-auto d-lg-none">
+				<div class="col-auto d-none d-lg-block">
+					<a class="top-nav__phone btn-link fw-700" href="tel:+88003025648">
+						<svg class="icon icon-phone-sm ">
+							<use xlink:href="img/svg/sprite.svg#phone-sm"></use>
+						</svg>8-800-302-56-48
+					</a>
+				</div>
+				<div class="col-auto ms-auto d-lg-none">
 					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 					</div>
 				</div>

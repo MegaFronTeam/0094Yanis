@@ -16,10 +16,11 @@
     }
     @include media-breakpoint-up(lg) {
       aspect-ratio: 3/1.5;
-      min-height: rem(700);
+      min-height: rem(760);
     }
     @include media-breakpoint-up(xl) {
       aspect-ratio: 1920/838;
+      min-height: rem(838);
     }
     &::after {
       content: '';

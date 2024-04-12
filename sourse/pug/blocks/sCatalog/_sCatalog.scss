@@ -1,7 +1,8 @@
 // start .sCatalog
 .sCatalog {
+  position: relative;;
 	--sPT: #{rem(110)};
-	// --sPB: #{rem()};
+	--sPB: #{rem(120)};
 	--sTPB: #{rem(47)};
 
 	&__row{
@@ -10,8 +11,32 @@
     @include media-breakpoint-up(lg) {
       max-width: rem(1120);
     }
-
 	}
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 10vw;
+    background-image: url("../img/pattern-bg.png");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: contain;
+    top: 0;
+    z-index: -1;
+    max-height: rem(1430);
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+    transform: rotate(180deg);
+  }
+
+
 	.section-title{
 		
 	}

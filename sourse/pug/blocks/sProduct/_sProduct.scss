@@ -106,8 +106,31 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sProduct
 
+
+.black-bg {
+  position: relative;
+  --sPB: #{rem(0)};
+  @include media-breakpoint-up(lg) {
+
+  }
+  // --sTPB: #{rem(50)};
+  // @include media-breakpoint-up(lg) {
+  //   --sPT: #{rem(0)};
+  //   --sTPB: #{rem(112)};
+  // }
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: rem(-65);
+    left: 0;
+    height: rem(65);
+    width: 100%;
+    background: $dark;
+  }
+}
+
 .sProduct--work {
-	--sPB: #{rem(62)};
+	--sPB: #{rem(50)};
 
   .section-title {
     display: flex;
@@ -202,7 +225,37 @@
 
 .sProduct {
   &--white {
-	--sPB: #{rem(110)};
+	  --sPB: #{rem(110)};
+    position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 9vw;
+    background-image: url("../img/pattern-bg.png");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: contain;
+    bottom: 0;
+    z-index: -5;
+    // max-height: rem(1430);
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+    transform: rotate(180deg);
+    @include media-breakpoint-up(xl) {
+    background-image: url("../img/green-bg.png");
+    background-repeat: no-repeat;
+    width: 40vw;
+    background-size: cover;
+    transform: rotate(0deg);
+    }
+  }
     background: transparent;
     .bg-wrap {
       max-width: rem(420);
@@ -307,3 +360,8 @@
   }
 
 }
+
+
+// .sProduct--work.black-bg {
+//   --sPB: #{rem(0)};
+// }

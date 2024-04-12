@@ -20,15 +20,24 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
+		+e.img-wrap.bg-wrap
+			+img(`img/header-bg.png`, 'bg').img
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
+				.col-auto
+					+img(src="img/logo-black.svg", alt="").logo
+				.col.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
-				.col-auto.d-lg-none
+							+e.phone.btn-link.fw-700.d-lg-none(href='tel:+88003025648')
+								+icon('phone-sm')
+								| 8-800-302-56-48
+				.col-auto.d-none.d-lg-block
+					+e.phone.btn-link.fw-700(href='tel:+88003025648')
+						+icon('phone-sm')
+						| 8-800-302-56-48
+				.col-auto.ms-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav
