@@ -3,14 +3,74 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	background: $dark;
+
+  h2, h3,
+  p {
+    color: $white;
+  }
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
-	.section-title{
-		
-	}
+	.section-title {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: calc(100% + rem(10));
+      left: 0;
+      width: rem(2);
+      height: rem(30);
+      background: $primary;
+    }
+  }
+
+  &__swiper--js {
+    max-height: rem(780);
+    max-width: max-content;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    width: rem(200);
+  }
+
+  .swiper-slide-active {
+    width: rem(260);
+    height: rem(220) !important;
+    margin: rem(20) 0;
+    height: auto;
+    // aspect-ratio: 1/1;
+    .slide-item {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 120%;
+        width: 120%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/active.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+      }
+    }
+    img {
+    }
+  }
+
+  .swiper-wrapper {
+    margin-left: rem(30);
+    margin-right: rem(30);
+    align-items: center;
+  }
+
 	&__col{
 		
 	}
@@ -26,3 +86,11 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sProductSlider
+
+.slide-item {
+  margin: rem(20);
+  img {
+    width: 100%;
+    border-radius: rem(200);
+  }
+}
