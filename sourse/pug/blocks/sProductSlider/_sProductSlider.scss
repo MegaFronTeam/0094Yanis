@@ -48,11 +48,11 @@
   &__swiper--js {
     // overflow: hidden;
     flex-shrink: 0;
+    max-width: 90%;
     @include media-breakpoint-up(lg) {
-    max-height: rem(780);
-    max-width: max-content;
-    overflow: hidden;
-
+      max-height: rem(780);
+      max-width: max-content;
+      overflow: hidden;
     }
   }
 
