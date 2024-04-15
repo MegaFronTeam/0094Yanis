@@ -45,7 +45,7 @@
   &:after {
     content: "";
     position: absolute;
-    display: block;
+    // display: block;
     height: calc(100% - 52px);
     width: 9vw;
     background-image: url("../img/pattern-bg.png");
@@ -54,7 +54,6 @@
     background-size: contain;
     top: 52px;
     z-index: -5;
-    // max-height: rem(1430);
   }
   &:before {
     left: 0;
@@ -112,8 +111,11 @@
     padding: rem(10);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: rem(24);
+    font-size: rem(18);
     position: relative;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(24);
+    }
     &::after {
       content: '';
       position: absolute;
@@ -331,7 +333,28 @@
     --sPT: #{rem(20)};
   }
 }
-#sFeatures3 {
+
+#sFeatures2, #sFeatures3 {
+  // --sPT: #{rem(150)};
+	// // --sPB: #{rem()};
+  &::before,
+  &::after {
+    height: 100%;
+    top: 0;
+  }
+  z-index: 3;
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(-70);
+    --sPT: #{rem(20)};
+    &::before,
+    &::after {
+      top: 70px;
+      height: calc(100% - 70px);
+    }
+  }
+}
+
+#sFeatures4 {
   --sPT: #{rem(150)};
 	// --sPB: #{rem()};
   @include media-breakpoint-up(lg) {

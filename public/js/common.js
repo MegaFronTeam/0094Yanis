@@ -144,27 +144,27 @@ function eventHandler() {
 	});
 
   const sProdSlider = new Swiper('.sProductSlider__swiper--js', {
-		spaceBetween: 20,
-    activeIndex: 2,
-		// watchOverflow: true,
-		loop: true,
-    direction: 'vertical',
-		// spaceBetween: 0,
-		slidesPerView: 4,
+		spaceBetween: 0,
+		watchOverflow: true,
+    direction: 'horizontal',
+		freeMode: true,
 		touchRatio: 0.4,
-    // thumbs: {
-    //   swiper: thumbsSwiper
-    // },
-		slideToClickedSlide: true,
+		// slideToClickedSlide: true,
+    slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true,
     breakpoints: {
       992: {
         spaceBetween: 30,
-      }
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        watchOverflow: false,
+      },
     }
 	});
 
 
-const buttons = document.querySelectorAll('.swiper .tabs__btn');
+const buttons = document.querySelectorAll('.sFeatures .swiper .tabs__btn');
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {

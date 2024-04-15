@@ -1,9 +1,15 @@
 mixin sContent()
 	// start sContent
-	+b.SECTION.sContent.section#sContent&attributes(attributes)
+	+b.SECTION.sContent--another-dark.section#sContent&attributes(attributes)
+		+e.img-wrap.bg-wrap.bg
+			+img(`img/advantages-bg.png`, 'bg')
 		.container
-			+b.section-title.text-center
-				h2 sContent
-				
-			+e.row.row
+	// end sContent
+
+mixin sContent2()
+	// start sContent
+	+b.SECTION.sContent--wide.section#sContent&attributes(attributes)
+		+e.img-wrap.bg-wrap.bg--big
+			+img(`img/prod-bg.png`, 'bg')
+		.container
 	// end sContent
