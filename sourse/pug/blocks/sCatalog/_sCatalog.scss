@@ -17,12 +17,12 @@
   &:after {
     content: "";
     position: absolute;
-    // display: block;
+    display: block;
     height: 100%;
     width: 9vw;
     background-image: url("../img/pattern-bg.png");
     background-repeat: repeat-y;
-    background-position: center;
+    background-position: center left;
     background-size: contain;
     top: 0;
     z-index: -1;

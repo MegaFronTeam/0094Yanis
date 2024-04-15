@@ -45,12 +45,12 @@
   &:after {
     content: "";
     position: absolute;
-    // display: block;
+    display: block;
     height: calc(100% - 52px);
     width: 9vw;
     background-image: url("../img/pattern-bg.png");
     background-repeat: repeat-y;
-    background-position: center;
+    background-position: center left;
     background-size: contain;
     top: 52px;
     z-index: -5;

@@ -67,6 +67,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-phoneSm {
+	$h: 25;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-plus {
 	$h: 40;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

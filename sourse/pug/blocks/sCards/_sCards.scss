@@ -7,9 +7,10 @@
     --sPB: #{rem(90)};
   }
 	position: relative;
-  top: rem(-25);
+  --delta: 25px;
+  top: calc(-1* var(--delta));
   @include media-breakpoint-up(lg) {
-    top: rem(-65);
+    --delta: 65px;
   }
   background: $dark;
 
@@ -22,6 +23,16 @@
     // margin-bottom: rem(140);
     --bs-gutter-y: #{rem(60)};
   }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    height: rem(125);
+  }
+  // background: black;
 	.section-title{
 		
 	}

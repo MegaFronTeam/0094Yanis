@@ -74,7 +74,6 @@
     gap: rem(12);
     align-items: center;
     font-size: rem(20);
-    transition: all .36s;
     @include media-breakpoint-up(xxl) {
       font-size: rem(24);
     }
@@ -84,7 +83,8 @@
       }
     }
     .icon {
-      // transition: all .36s ease-in-out;
+      fill: $dark;
+      transition: inherit;
     }
     @include media-breakpoint-down(lg) {
       margin-top: rem(30);
