@@ -151,8 +151,17 @@
 .sAbout--footer {
 	--sPT: #{rem(90)};
   .phone {
-    width: rem(393);
-    max-width: 100%;
+    width: rem(294);
+    margin-top: 10px;
+    aspect-ratio: 379 / 400;
+    @include media-breakpoint-up(xl) {
+      margin-top: 0;
+      width: rem(349);
+    }
+    @include media-breakpoint-up(xxl) {
+      width: rem(389);
+      aspect-ratio: 389 / 410;
+    }
   }
   &::after {
     content: none;
