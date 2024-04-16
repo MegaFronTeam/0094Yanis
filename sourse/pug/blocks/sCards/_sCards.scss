@@ -28,9 +28,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: black;
+    background: $dark;
     width: 100%;
     height: rem(125);
+    @include media-breakpoint-up(lg) {
+    background: black;
+    }
   }
   // background: black;
 	.section-title{

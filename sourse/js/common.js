@@ -154,14 +154,14 @@ function eventHandler() {
     }
 	});
 
-//   AOS.init({
-//   disable: 'mobile',
-//   // offset: 200,
-//   once: true,
-//   duration: 600,
-//   easing: 'ease-in-out-cubic',
-//   // delay: 100,
-// });
+  AOS.init({
+  disable: 'mobile',
+  // offset: 200,
+  once: true,
+  duration: 1000,
+  easing: 'ease-in-out',
+  // delay: 100,
+});
 
   const buttons = document.querySelectorAll('.sFeatures .swiper .tabs__btn');
 

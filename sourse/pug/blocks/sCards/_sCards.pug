@@ -4,15 +4,23 @@ mixin sCards(data)
 		.container
 			+e.cards-row.row
 				+e.col.col-lg-4
-					+advCard('quality', 'Качество', 'Современная техника от Канадского бренда с гарантией 3 года', '1')
+					+advCardAnimated('quality', 'Качество', 'Современная техника от Канадского бренда с гарантией 3 года', '1')
 				+e.col.col-lg-4
-					+advCard('earth', 'Большой ассортимент', 'Продаем наше оборудование более чем в 38 стран по всему миру', '2')
+					+advCardAnimated('earth', 'Большой ассортимент', 'Продаем наше оборудование более чем в 38 стран по всему миру', '2')
 				+e.col.col-lg-4
-					+advCard('cheaper', 'Низкие цены', 'Оборудование продается напрямую с завода без посредников и диллеров', '3')
+					+advCardAnimated('cheaper', 'Низкие цены', 'Оборудование продается напрямую с завода без посредников и диллеров', '3')
 	// end sCards
 
+mixin advCardAnimated(icon, title, descr, i)
+	+b.adv-card(data-aos="fade-up" data-aos-delay="300")
+		+icon(`${icon}`)
+		+e.title.fw-700!= title
+		+e.description!= descr
+		+icon(`grass`)
+		+e.number(data-aos="fade-right" data-aos-delay="700" data-aos-duration="1200")!= i
+
 mixin advCard(icon, title, descr, i)
-	+b.adv-card(data-aos="fade-down" data-aos-delay="300")
+	+b.adv-card
 		+icon(`${icon}`)
 		+e.title.fw-700!= title
 		+e.description!= descr
