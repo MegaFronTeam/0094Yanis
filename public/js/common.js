@@ -154,6 +154,9 @@ function eventHandler() {
     }
 	});
 
+  const wrapper = document.querySelector('.main-wrapper')
+  wrapper.classList.remove('wrapper-hidden')
+
   AOS.init({
   disable: 'mobile',
   // offset: 200,
