@@ -106,17 +106,9 @@ function eventHandler() {
   const sProductSlider2 = new Swiper('.slider-2 .sFeatures__swiper--js', {
 		spaceBetween: 5,
 		watchOverflow: true,
-		// spaceBetween: 0,
 		slidesPerView: "auto",
-		// freeMode: true,
-		// loopFillGroupWithBlank: true,
 		touchRatio: 0.4,
 		slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		// navigation: {
-		// 	nextEl: '.slider-2 .swiper-button-next',
-		// 	prevEl: '.slider-2 .swiper-button-prev',
-		// },
     breakpoints: {
       992: {
         spaceBetween: 30,
@@ -124,7 +116,6 @@ function eventHandler() {
     }
 	});
 
-  
   const sAdvantagesSlider = new Swiper('.sAdvantages__swiper--js', {
 		spaceBetween: 20,
 		watchOverflow: true,
@@ -163,37 +154,42 @@ function eventHandler() {
     }
 	});
 
+//   AOS.init({
+//   disable: 'mobile',
+//   // offset: 200,
+//   once: true,
+//   duration: 600,
+//   easing: 'ease-in-out-cubic',
+//   // delay: 100,
+// });
 
-const buttons = document.querySelectorAll('.sFeatures .swiper .tabs__btn');
+  const buttons = document.querySelectorAll('.sFeatures .swiper .tabs__btn');
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const parent = button.closest('.section-title');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const parent = button.closest('.section-title');
 
-    if (parent) {
-      const image = parent.querySelector('img');
-      const buttonText = button.textContent.trim().toLowerCase();
-      switch(buttonText) {
-        case 'описание':
-          image.src = 'img/info.png';
-          break;
-        case 'характеристики':
-          image.src = 'img/feature.png';
-          break;
-        case 'особенности':
-          image.src = 'img/tablet.png';
-          break;
-        default:
-          break;
+      if (parent) {
+        const image = parent.querySelector('img');
+        const buttonText = button.textContent.trim().toLowerCase();
+        switch(buttonText) {
+          case 'описание':
+            image.src = 'img/info.png';
+            break;
+          case 'характеристики':
+            image.src = 'img/feature.png';
+            break;
+          case 'особенности':
+            image.src = 'img/tablet.png';
+            break;
+          default:
+            break;
+        }
       }
-    }
+    });
   });
-});
-
-
-
-	
 }
+
 if (document.readyState !== "loading") {
 	eventHandler();
 } else {

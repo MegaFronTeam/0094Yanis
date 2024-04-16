@@ -12,7 +12,7 @@ mixin sCards(data)
 	// end sCards
 
 mixin advCard(icon, title, descr, i)
-	+b.adv-card
+	+b.adv-card(data-aos="fade-down" data-aos-delay="300")
 		+icon(`${icon}`)
 		+e.title.fw-700!= title
 		+e.description!= descr

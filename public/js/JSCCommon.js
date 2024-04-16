@@ -417,6 +417,7 @@ export default class JSCCommon {
 		this.mobileMenu();
 		this.inputMask();
 		// this.sendForm();
+    
 		this.heightWindow();
 		this.makeDDGroup();
 		this.disabledBtn();
