@@ -14,3 +14,11 @@ mixin headerBlock()
 				p Современное оборудование для работы в саду и на дачном участке
 				+e.btn.btn.btn-primary подобрать технику
 	// end headerBlock
+
+
+
+mixin headerBlock2()
+	// start headerBlock
+	+b.headerBlock--small.section#headerBlock.d-none.d-lg-block&attributes(attributes)
+		+e.img-wrap.bg-wrap
+			+img(`img/headerBlock-bg-small.png`, 'bg')

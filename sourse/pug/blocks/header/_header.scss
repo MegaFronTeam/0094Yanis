@@ -1,3 +1,11 @@
+.small .header {
+  @include media-breakpoint-up(lg) {
+    top: rem(30);
+  }
+  // @include media-breakpoint-up(xl) {
+  //   top: rem(30);
+  // }
+}
 
 	// start .header
 	.header {
