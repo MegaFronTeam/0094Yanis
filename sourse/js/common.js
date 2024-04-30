@@ -85,6 +85,18 @@ function eventHandler() {
     }
   ); //
 
+  let prodCardThumb = new Swiper(".sProdCard-thumb-js", {
+    slidesPerView: 4,
+    spaceBetween: 0,
+  });
+  let prodCardSlider = new Swiper(".sProdCard-slider-js", {
+    spaceBetween: 30,
+    thumbs: {
+      swiper: prodCardThumb,
+    },
+    loop: true,
+  }); //
+
   const sProductCard = new Swiper('.m-content__slider--js', {
 		spaceBetween: 5,
 		watchOverflow: true,

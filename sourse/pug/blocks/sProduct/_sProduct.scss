@@ -12,7 +12,7 @@
 		
 	}
 	&__col{
-		
+		position: relative;
 	}
 	&__item{
 		
@@ -159,6 +159,68 @@
       background: $white;
       border-radius: 50%;
     }
+  }
+
+  &__s-img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    // padding: 1.875rem;
+    max-width: rem(500);
+    img {
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+    }
+    
+  }
+
+  // &__thumb-wrap {
+  //   @include media-breakpoint-up(lg) {
+  //     max-width: 90%;
+  //   }
+  // }
+  &__row-product {
+    --bs-gutter-y: var(--bs-gutter-x);
+  }
+
+  .sProdCard-thumb-js {
+    img {
+      width: rem(80);
+      max-width: 80%;
+      margin-left: 18%;
+    }
+    .slide-item-1 {
+      margin: rem(20) rem(10);
+    }
+    .swiper-slide-thumb-active {
+      .slide-item-1 {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 150%;
+          width: 100%;
+          transform: translate(-50%, -50%);
+          background-image: url("../img/active-mini.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  .leafs-3 {
+    position: absolute;
+    top: 0;
+    left: 4%;
+    z-index: 10;
   }
 
 	@include media-breakpoint-up(xl) {}

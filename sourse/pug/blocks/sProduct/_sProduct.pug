@@ -91,17 +91,38 @@ mixin advItem(icon, text)
 		+e.text!= text
 
 
+mixin sProdCardSlide(imgNum)
+	.swiper-slide
+		+e.s-img(href=`img/product-${imgNum}.png` data-fancybox='sProdCardSlide')
+			img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
+
+mixin sProdCardThumb(imgNum)
+	.swiper-slide
+		.slide-item-1
+			img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
 
 mixin sProduct4(data)
 	// start sProduct
 	+b.SECTION.sProduct--card.section--wide#sProduct4&attributes(attributes)
 		.container
 			+breadcrumb('Главная', 'Воздуходувки')
-			+e.row.row
+			+e.row-product.row
 				+e.col.col-lg-5
-					+e.img-wrap.bg-wrap
-						+img("img/product-1.png", 'bg')
-						+img(src="img/leafs-3.png", alt="").leafs-3
+					+img(src="img/leafs-3.png", alt="").leafs-3
+					+e.slider-wrap
+						.swiper.sProdCard-slider-js
+							.swiper-wrapper
+								+sProdCardSlide('1')
+								+sProdCardSlide('1')
+								+sProdCardSlide('1')
+								+sProdCardSlide('1')
+					+e.thumb-wrap
+						.swiper.sProdCard-thumb-js
+							.swiper-wrapper
+								+sProdCardThumb('1')
+								+sProdCardThumb('1')
+								+sProdCardThumb('1')
+								+sProdCardThumb('1')
 				+e.col.col-lg-7.content-wrapper
 					+e.content
 						+e.inner-wrap
