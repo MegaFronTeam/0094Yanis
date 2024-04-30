@@ -89,3 +89,103 @@ mixin advItem(icon, text)
 	+b.adv-item
 		+icon(`${icon}`)
 		+e.text!= text
+
+
+
+mixin sProduct4(data)
+	// start sProduct
+	+b.SECTION.sProduct--card.section--wide#sProduct4&attributes(attributes)
+		.container
+			+breadcrumb('Главная', 'Воздуходувки')
+			+e.row.row
+				+e.col.col-lg-5
+					+e.img-wrap.bg-wrap
+						+img("img/product-1.png", 'bg')
+						+img(src="img/leafs-3.png", alt="").leafs-3
+				+e.col.col-lg-7.content-wrapper
+					+e.content
+						+e.inner-wrap
+							h3 Воздуходувка бензиновая Yanis AirStorm EB260B
+							+b.prodCard-chars
+								+sProdCardChar('Артикул:', ' 10209256')
+						+e.inner-wrap
+							+e.body-row.row
+								.col-md
+									+b.tags-row.row
+										+sProdCardTag('heart', 'В избранное')
+										+sProdCardTag('compare', 'Сравнить')
+										+sProdCardTag('share', 'Поделиться')
+									.reviews__stars
+										+e.stars-wrap
+											+icon('star').active
+											+icon('star').active
+											+icon('star').active
+											+icon('star').active
+											+icon('star')
+										+e.how-much(href='#') 3 отзывы
+									+b.prodCard-buy
+										+e.price.h4.fw-700 69 990 руб.
+										+e.bonus-row
+											+e.b-val.small #[span +299.5] бонусов
+											+e.tooltit
+												+img(src="img/question.png", alt="")
+						+e.inner-wrap
+							+e.footer-row.row
+								.col-sm-auto: .btn.btn-primary(href='#modal-delivery-form' ).link-modal-js заказать модель
+								.col-sm-auto
+									a.prodCard-buy__discount(href="#")
+										.icon-wrap
+											+icon('percent')
+										| Оформить рассрочку
+					+b.payment
+						.row
+							+e.col.col-md-auto
+								+e.item
+									+img('img/svg/payment-1.svg')
+									| Рассрочка/кредит
+							+e.col.col-md-auto
+								+e.item
+									+img('img/svg/payment-2.svg')
+									| Рассрочка/кредит
+							+e.col.col-md-auto
+								+e.item
+									+img('img/svg/payment-3.svg')
+									| Оплата по QR
+					+b.payment.descr
+						+e.item
+							+img('img/svg/delivery.svg')
+							| Доставка: бесплатно
+						+e.item
+							+img('img/svg/house.svg')
+							| Самовывоз: сегодня, бесплатно
+					.wrapper
+						+e.all-characteristics(href='#')
+							| Все характеристики
+							.icon-wrap: +icon('arrow2')
+	// end sProduct
+
+
+mixin sProdCardChar(key, val)
+	+b.char
+		+e.SPAN.key=key
+		+e.SPAN.val=val
+
+
+mixin sProdCardTag(tagName, txt)
+	.col-auto
+		if txt == "Поделиться"
+			+e.tag--share
+				+e.share-toggle
+					if tagName
+						+e.icon
+							+icon(tagName)
+					span=txt
+				+e.share-dropdown
+					<script src="https://yastatic.net/share2/share.js"></script>
+					<div class="ya-share2" data-curtain data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki"></div>
+		else
+			+e.tag(href="#")
+				if tagName
+					+e.icon
+						+icon(tagName)
+				span=txt
