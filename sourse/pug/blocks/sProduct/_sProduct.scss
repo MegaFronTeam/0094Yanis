@@ -108,6 +108,8 @@
     h3 {
       margin-bottom: rem(16);
       line-height: rem(48);
+      max-width: 100%;
+      width: 100%;
     }
     a {
       color: $gray-400;
@@ -115,7 +117,7 @@
     .sProduct__content {
       gap: rem(20);
     }
-    
+
     .reviews__stars {
       gap: rem(30);
       margin-bottom: rem(26);

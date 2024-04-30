@@ -55,7 +55,7 @@ mixin middleContent2()
 									+icon('star').active
 									+icon('star').active
 									+icon('star').active
-									+icon('star').active
+									+icon('star')
 							a.btn-link.link(href='#') Посмотреть отзывы
 					.col-md-6.col-lg-12
 						+e.item
@@ -73,7 +73,7 @@ mixin middleContent2()
 						+e.item--transparent
 							+e.ct-title Контроль качества
 							div
-								.subtitle.gray Номер для претензий и предложений:
+								.subtitle.gray.small Номер для претензий и предложений:
 								a.tel.fw-700(href="tel:84995202728") 8 (499) 520-27-28
 							+e.btn.btn.btn-dark(href='#') Написать
 			.col-lg-8
@@ -120,15 +120,14 @@ mixin middleContentTableRow(key, val)
 		+e.ct-val.col-auto.col-md=val
 
 
-mixin reviews(starsCount)
+mixin reviews()
 	+b.reviews&attributes(attributes)
 		.m-content__title-wrap: h2 Отзывы о воздуходувке Yanis AirStorm EB260B
 		+e.stars
-			+icon('star').active
-			+icon('star').active
-			+icon('star').active
-			+icon('star').active
-			+icon('star')
+			- var starsCount = 5
+			- for (let i = 1; i <= 5; i++)
+				+e.item-star(class= i <= starsCount ? 'active' : '')
+					+icon('star')
 			if starsCount
 				span 5
 			+e.how-much(href='#') 3 отзывы
@@ -147,11 +146,10 @@ mixin reviewsItem()
 				+e.rate
 					p Оценка
 					+e.stars
-						+icon('star').active
-						+icon('star').active
-						+icon('star').active
-						+icon('star').active
-						+icon('star')
+						- var starsCount = 4
+						- for (let i = 1; i <= 5; i++)
+							+e.item-star(class= i <= starsCount ? 'active' : '')
+								+icon('star')
 				+e.features
 					+e.text
 						p Шум

@@ -135,6 +135,8 @@
   &__ct-tr {
     padding: rem(10) rem(0);
     border-radius: rem(15);
+    margin-left: 0;
+    max-width: 100%;
     @include media-breakpoint-up(lg) {
       padding: rem(10) rem(30);
     }
@@ -152,7 +154,7 @@
     align-items:center;
     gap: rem(20);
     &:not(:last-child) {
-      margin-bottom: rem(10);
+      margin-bottom: rem(10) !important;
     }
     .icon-wrap {
       background: $white;
@@ -265,13 +267,14 @@
   &__stars .icon {
     color: $orange;
     font-size: 1rem;
-    opacity: .5;
   }
-  &__stars .icon.active {
-    opacity: 1;
+  &__item-star {
+    opacity: .5;
+    &.active {
+      opacity: 1;
+    }
   }
   &__text-wrap {
-    
     margin-bottom: rem(30);
   }
 
@@ -432,7 +435,7 @@
 
   &--transparent {
     background: transparent;
-    padding-top: rem(10);
+    padding-top: rem(10) !important;
     padding-bottom: rem(70);
     &:before {
       content: none;
