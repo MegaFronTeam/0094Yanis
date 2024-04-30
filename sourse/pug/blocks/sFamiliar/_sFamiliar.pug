@@ -1,0 +1,34 @@
+mixin sFamiliar(data)
+	// start sFamiliar
+	+b.SECTION.sFamiliar.section#sFamiliar&attributes(attributes)
+		.container
+			+e.row.row.row-title
+				.col
+					h3 С этим товаров покупают
+				+e.arrow-col.col-auto
+					+e.link(href='#') Смотреть все
+			+e.slider-wrap
+				.swiper.sFamiliar-slider-js
+					.swiper-wrapper
+						+sProdSlide('prod-slider-3','Газонокосилка бензиновая самоходная Yanis Borasco B43F', '', '69 990 руб.')
+						+sProdSlide('product-2','Мотоблок бензиновый Yanis Angry II', '196 990 руб.', '122 000 руб.')
+						+sProdSlide('prod-slider-6','Триммер аккумуляторный Yanis Violet AGT12V', '', '25 990 руб.')
+						+sProdSlide('product-1','Воздуходувка бензиновая Yanis AirStorm EB260B', '', '39 500 руб.')
+						+sProdSlide('prod-slider-3','Газонокосилка бензиновая самоходная Yanis Borasco B43F', '', '69 990 руб.')
+						+sProdSlide('product-2','Мотоблок бензиновый Yanis Angry II', '196 990 руб.', '122 000 руб.')
+						+sProdSlide('prod-slider-6','Триммер аккумуляторный Yanis Violet AGT12V', '', '25 990 руб.')
+						+sProdSlide('product-1','Воздуходувка бензиновая Yanis AirStorm EB260B', '', '39 500 руб.')
+				.arrow-col
+					+arrow2()
+	// end sFamiliar
+
+mixin sProdSlide(img, text, oldPrice, newPrice)
+	.swiper-slide
+		+b.familiar-prod-item.text-center
+			.wrap
+				+e.img-wrap.bg-wrap
+					+img(`img/${img}.png`, 'bg')
+				p=text
+			.wrap
+				.price.price_old.small=oldPrice
+				.price.price_new.fw-600=newPrice

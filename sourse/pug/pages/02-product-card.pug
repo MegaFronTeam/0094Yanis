@@ -1,0 +1,36 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sFeatures/_sFeatures.pug
+include ../blocks/sFamiliar/_sFamiliar.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sProduct/_sProduct.pug
+include ../blocks/sProductCard/_sProductCard.pug
+include ../blocks/sProductSlider/_sProductSlider.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+
+	+parts('header')
+	main
+		+headerBlock
+		+sProductCard
+		+sFamiliar
+		+sAbout3
+	+parts('footer')

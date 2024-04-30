@@ -8,9 +8,14 @@
 }
 
 .icon-arrow {
-	$h: 8;
+	$h: 15;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(88 / #{$h} *1em );
+	width: calc(41 / #{$h} *1em );
+}
+.icon-arrow2 {
+	$h: 13;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(8 / #{$h} *1em );
 }
 .icon-basket {
 	$h: 24;
@@ -26,6 +31,11 @@
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
+}
+.icon-disLike {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
 }
 .icon-earth {
 	$h: 48;
@@ -47,15 +57,30 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-instruction {
+	$h: 40;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(40 / #{$h} *1em );
+}
 .icon-leaf {
 	$h: 200;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(200 / #{$h} *1em );
 }
+.icon-like {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
+}
 .icon-line {
 	$h: 30;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(2 / #{$h} *1em );
+}
+.icon-lock {
+	$h: 15;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
 }
 .icon-phone {
 	$h: 32;
@@ -86,6 +111,11 @@
 	$h: 117;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(103 / #{$h} *1em );
+}
+.icon-star {
+	$h: 14;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(14 / #{$h} *1em );
 }
 .icon-sunshine {
 	$h: 72;

@@ -1,0 +1,187 @@
+mixin sProductCard(data)
+	// start sProductCard
+	+b.SECTION.sProductCard.section#sProductCard&attributes(attributes)
+		.container
+			//- +breadcrumb('Главная', 'Воздуходувки')
+			+middleContent2
+	// end sProductCard
+
+
+
+mixin middleContent2()
+	+b.m-content
+		.row.row-content
+			.col-lg-4.order-lg-last
+				+e.item-row.row
+					.col-md-6.col-lg-12
+						+e.item
+							.text Скачать инструкцию для воздуходувки Yanis AirStorm EB260B
+							+e.instruction(href='#')
+								.icon-wrap: +icon('instruction')
+								div
+									p Инструкция на русском языке
+									span PDF, 5.25 MB
+							+e.instruction(href='#')
+								.icon-wrap: +icon('instruction')
+								div
+									p Схема сборки
+									span DOC, 150 KB
+					.col-md-6.col-lg-12
+						+e.item
+							+e.ct-title Может быть полезно
+							+e.slider--js.swiper
+								.swiper-wrapper
+									+e.slide.swiper-slide
+										.bg-wrap(href='#'): +img('img/product-1.png', 'bg')
+									+e.slide.swiper-slide
+										.bg-wrap(href='#'): +img('img/product-1.png', 'bg')
+									+e.slide.swiper-slide
+										.bg-wrap(href='#'): +img('img/product-1.png', 'bg')
+									+e.slide.swiper-slide
+										.bg-wrap(href='#'): +img('img/product-1.png', 'bg')
+								.swiper-controls
+									.swiper-pagination
+									.arrows
+										+arrow()
+
+							a.btn-link.link(href='#') Посмотреть все статьи
+					.col-md-6.col-lg-12
+						+e.item--shop
+							+img('img/yandex-market.png').res-i.img
+							+e.ct-title.gray Рейтинг магазина:
+							+b.reviews
+								+e.stars
+									+icon('star').active
+									+icon('star').active
+									+icon('star').active
+									+icon('star').active
+									+icon('star').active
+							a.btn-link.link(href='#') Посмотреть отзывы
+					.col-md-6.col-lg-12
+						+e.item
+							+e.ct-title--sm Кредит на
+							.gray Воздуходувку Yanis AirStorm EB260B
+							+e.img-row.row
+								.col-auto: +img('img/bank-logo-1.png')
+								.col-auto: +img('img/bank-logo-2.png')
+								.col-auto: +img('img/bank-logo-3.png')
+								.col-auto: +img('img/bank-logo-4.png')
+								.col-auto: +img('img/bank-logo-5.png')
+								.col-auto: +img('img/bank-logo-6.png')
+							a.btn-link.link(href='#') Узнать больше
+					.col-md-6.col-lg-12
+						+e.item--transparent
+							+e.ct-title Контроль качества
+							div
+								.subtitle.gray Номер для претензий и предложений:
+								a.tel.fw-700(href="tel:84995202728") 8 (499) 520-27-28
+							+e.btn.btn.btn-dark(href='#') Написать
+			.col-lg-8
+				+e.id-mark(id='desc')
+					+e.title-wrap(id='desc')
+						h2 Описание
+					+e.text-wrap 
+						p #[span Yanis AirStorm EB260B] — предназначена для сдувания листьев с тротуаров, дорожек, газонов и очистки других поверхностей от мелкого мусора.<br>Воздуходувка оборудована удобной ручкой и прорезиненными ножками для установки на любое покрытие.<br>Мощный двухтактный двигатель позволяет добиться потока воздуха в 650 м3/ч.<br>Вес в собранном виде всего 4,5 кг.<br>Размеры упаковки (ДхШхВ), мм 390х245х365<br>Гарантия 2+1 года
+				+e.id-mark(id='spec')
+					+e.title-wrap
+						h2 Характеристики
+					+e.char-table
+						+middleContentTableItem('Габариты и вес')
+							+middleContentTableRow('Ёмкость топливного бака:','68х51х43 мм.')
+							+middleContentTableRow('Вес нетто:','22 кг.')
+						+middleContentTableItem('Общие характеристики')
+							+middleContentTableRow('Рекомендуется для участка площадью:','3-10 соток')
+							+middleContentTableRow('Материал травосборника:','Ткань')
+							+middleContentTableRow('Объём травосборника:','40 л.')
+							+middleContentTableRow('Привод колёс:','Нет')
+							+middleContentTableRow('Диаметр передних колёс:','7 "')
+							//
+							+middleContentTableRow('Диаметр задних колёс:','8 "')
+							+middleContentTableRow('Шарикоподшипники в колёсах:','Да')
+							+middleContentTableRow('Тип рукоятки:','Складная')
+							+middleContentTableRow('Регулировка высоты кошения:','Центральная')
+							+middleContentTableRow('Высота кошения:','20-70 мм.')
+							+middleContentTableRow('Боковой выброс:','Нет')
+							+middleContentTableRow('Коннектор для мойки деки:','Нет')
+				+e.id-mark(id='review')
+					+reviews(true)
+
+
+mixin middleContentTableItem(title, addTittleClass='')
+	+e.ct-item
+		//css class "big" can be removed
+		+e.ct-title(class=addTittleClass)=title
+		+e.ct-tr-wrap
+			block
+
+mixin middleContentTableRow(key, val)
+	+e.ct-tr.row
+		+e.ct-key.col.col-md-6.col-lg-7=key
+		+e.ct-val.col-auto.col-md=val
+
+
+mixin reviews(starsCount)
+	+b.reviews&attributes(attributes)
+		.m-content__title-wrap: h2 Отзывы о воздуходувке Yanis AirStorm EB260B
+		+e.stars
+			+icon('star').active
+			+icon('star').active
+			+icon('star').active
+			+icon('star').active
+			+icon('star')
+			if starsCount
+				span 5
+			+e.how-much(href='#') 3 отзывы
+		+e.btn(href="#modal-reviews").btn.btn-dark.link-modal-js Оставить отзыв
+		+reviewsItem()
+		+reviewsItem()
+		+e.showMore(href="#").btn.btn-outline-white Показать еще
+
+mixin reviewsItem()
+	+e.item
+		+e.row.row
+			+e.col.col-lg-auto
+				+e.head
+					.m-content__ct-title Максим
+					p 27. 12. 2020
+				+e.rate
+					p Оценка
+					+e.stars
+						+icon('star').active
+						+icon('star').active
+						+icon('star').active
+						+icon('star').active
+						+icon('star')
+				+e.features
+					+e.text
+						p Шум
+						p 4
+					+e.line(style="--rate: 4")
+				+e.features
+					+e.text
+						p Качество стирки
+						p 3
+					+e.line(style="--rate: 3")
+				+e.features
+					+e.text
+						p Внешний вид
+						p 5
+					+e.line(style="--rate: 5")
+			.col-lg
+				+e.text-wrap
+					+e.text-item
+						p Достоинства
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					+e.text-item
+						p Недостатки
+						p Vitae eget rhoncus eget nec semper feugiat sagittis aliquam. Habitant mattis aliquet id elementum eu sit nulla scelerisque quis. 
+					+e.text-item
+						p Общее впечатление
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae eget rhoncus eget nec semper feugiat sagittis aliquam. Habitant mattis aliquet id elementum eu sit nulla scelerisque quis. 
+				+e.grade
+					+e.button.BUTTON
+						+icon('like')
+						| 20
+					+e.button.BUTTON
+						+icon('disLike')
+						| 1
