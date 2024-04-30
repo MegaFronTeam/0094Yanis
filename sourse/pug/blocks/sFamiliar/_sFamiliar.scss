@@ -1,7 +1,7 @@
 // start .sFamiliar
 .sFamiliar {
 	--sPT: #{rem(92)};
-	// --sPB: #{rem()};
+	--sPB: #{rem(140)};
 	// --sTPB: #{rem()};
 	
 	background: $dark;
@@ -94,7 +94,7 @@
 	}
 
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(xxl) {
     .swiper-button-hand-next {
       right: -76px;
     }
@@ -129,7 +129,7 @@
   gap: rem(30);
 
   .bg-wrap {
-    max-width: 95%;
+    max-width: 90%;
     margin: auto;
     img {
       border-radius: rem(10);

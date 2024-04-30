@@ -510,6 +510,7 @@ h1, h2, .h2 {
 }
 
 .btn-dark {
+  border-radius: rem(10);
   --bs-btn-color: #fff;
   --bs-btn-bg: #{$gray-800};
   --bs-btn-border-color: #{$gray-800};

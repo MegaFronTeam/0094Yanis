@@ -1,3 +1,11 @@
+.section--wide {
+  .container {
+    @include media-breakpoint-up(xl) {
+      max-width: 1390px;
+    }
+  }
+}
+
 // start .sProductCard
 .sProductCard {
 	--sPT: #{rem(103)};
@@ -41,12 +49,7 @@
 	&__item{
 		
 	}
-  .container {
-    max-width: 1370px;
-    @include media-breakpoint-up(xl) {
-      max-width: 1370px;
-    }
-  }
+
 
   h2 {
     font-family: 'open sans';
@@ -91,6 +94,9 @@
 
 
 .m-content {
+  @include media-breakpoint-up(xxl) {
+    margin-right: rem(20);
+  }
   &__id-mark:not(:last-child) {
     margin-bottom: rem(70);
   }
@@ -264,6 +270,10 @@
   &__stars .icon.active {
     opacity: 1;
   }
+  &__text-wrap {
+    
+    margin-bottom: rem(30);
+  }
 
   &__how-much {
     color: $primary;
@@ -281,7 +291,7 @@
 		margin-bottom: rem(20);
     border-radius: rem(15);
 		@include media-breakpoint-up(sm) {
-			padding: rem(40) rem(86) rem(27) rem(66);
+			padding: rem(40) rem(70) rem(40) rem(66);
 		}
 	}
 	&__head {
