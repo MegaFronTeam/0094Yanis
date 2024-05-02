@@ -452,3 +452,27 @@
   --bs-gutter-x: #{rem(20)};
   --bs-gutter-y: #{rem(20)};
 }
+
+// [data-star="0"] .item-star:nth-child(-n+5) {
+//   // Стили для неактивных звезд
+// }
+
+// [data-star="1"] .item-star:nth-child(-n+1) {
+//   opacity: 1;
+// }
+
+// [data-star="2"] .item-star:nth-child(-n+2) {
+//   // Стили для двух активных звезд
+// }
+
+// [data-star="3"] .item-star:nth-child(-n+3) {
+//   // Стили для трех активных звезд
+// }
+
+// [data-star="4"] .item-star:nth-child(-n+4) {
+//   // Стили для четырех активных звезд
+// }
+
+// [data-star="5"] .item-star {
+//   // Стили для всех пяти активных звезд
+// }
