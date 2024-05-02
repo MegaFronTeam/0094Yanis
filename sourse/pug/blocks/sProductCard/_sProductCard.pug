@@ -50,11 +50,11 @@ mixin middleContent2()
 							+img('img/yandex-market.png').res-i.img
 							+e.ct-title.gray Рейтинг магазина:
 							+b.reviews
-								+e.stars
-									+icon('star').active
-									+icon('star').active
-									+icon('star').active
-									+icon('star').active
+								+e.stars(data-star='5')
+									+icon('star')
+									+icon('star')
+									+icon('star')
+									+icon('star')
 									+icon('star')
 							a.btn-link.link(href='#') Посмотреть отзывы
 					.col-md-6.col-lg-12
@@ -104,7 +104,7 @@ mixin middleContent2()
 							+middleContentTableRow('Боковой выброс:','Нет')
 							+middleContentTableRow('Коннектор для мойки деки:','Нет')
 				+e.id-mark(id='review')
-					+reviews(true)
+					+reviews(5)
 
 
 mixin middleContentTableItem(title, addTittleClass='')
@@ -120,16 +120,16 @@ mixin middleContentTableRow(key, val)
 		+e.ct-val.col-auto.col-md=val
 
 
-mixin reviews()
+mixin reviews(stars)
 	+b.reviews&attributes(attributes)
 		.m-content__title-wrap: h2 Отзывы о воздуходувке Yanis AirStorm EB260B
-		+e.stars
-			- var starsCount = 5
-			- for (let i = 1; i <= 5; i++)
-				+e.item-star(class= i <= starsCount ? 'active' : '')
-					+icon('star')
-			if starsCount
-				span 5
+		+e.stars(data-star=stars)
+			+icon('star')
+			+icon('star')
+			+icon('star')
+			+icon('star')
+			+icon('star')
+			span 5
 			+e.how-much(href='#') 3 отзывы
 		+e.btn(href="#modal-reviews").btn.btn-dark.link-modal-js Оставить отзыв
 		+reviewsItem()
@@ -145,11 +145,12 @@ mixin reviewsItem()
 					p 27. 12. 2020
 				+e.rate
 					p Оценка
-					+e.stars
-						- var starsCount = 4
-						- for (let i = 1; i <= 5; i++)
-							+e.item-star(class= i <= starsCount ? 'active' : '')
-								+icon('star')
+					+e.stars(data-star='4')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
+						+icon('star')
 				+e.features
 					+e.text
 						p Шум
