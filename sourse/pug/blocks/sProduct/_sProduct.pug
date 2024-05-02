@@ -95,6 +95,7 @@ mixin sProdCardSlide(imgNum)
 	.swiper-slide
 		+e.s-img(href=`img/product-${imgNum}.png` data-fancybox='sProdCardSlide')
 			img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
+			+img(src="img/leafs-3.png", alt="").leafs-3
 
 mixin sProdCardThumb(imgNum)
 	.swiper-slide
@@ -108,7 +109,6 @@ mixin sProduct4(data)
 			+breadcrumb('Главная', 'Воздуходувки')
 			+e.row-product.row
 				+e.col.col-lg-5
-					+img(src="img/leafs-3.png", alt="").leafs-3
 					+e.slider-wrap
 						.swiper.sProdCard-slider-js
 							.swiper-wrapper
