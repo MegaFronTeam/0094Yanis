@@ -135,3 +135,17 @@
 	content: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.704102 8.33398L6.05664 6.07129L0.704102 3.53516V2.52344L7.28027 5.77734V6.42676L0.704102 9.33887V8.33398Z' fill='%2390959B' /%3E%3C/svg%3E");
 	margin-right: rem(8);
 }
+
+.policy--mh0 {
+  .p-txt {
+    color: $gray-600;
+    font-size: rem(12);
+    .icon {
+      margin-right: rem(10);
+      margin-bottom: rem(5);
+    }
+  }
+  .btn-link {
+    color: $primary;
+  }
+}

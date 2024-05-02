@@ -49,3 +49,11 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin policy2
+	+b.policy--mh0
+		.p-txt
+			+icon('lock')
+			| Мы безопасно храним данные и никому их не передаём, вот
+			| 
+			a.btn-link(href="#") условия.

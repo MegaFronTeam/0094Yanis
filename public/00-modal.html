@@ -196,6 +196,81 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-reviews bg-wrap" id="modal-reviews" style="display: none">
+			<div class="h3">Оставить отзыв</div>
+			<div class="modal-reviews__stars">
+				<p>Оценка</p>
+				<div class="rating__group">
+					<input class="rating__input" id="mood-1" type="radio" name="mood" value="1"/>
+					<label class="rating__star" for="mood-1" aria-label="Ужасно"></label>
+					<input class="rating__input" id="mood-2" type="radio" name="mood" value="2"/>
+					<label class="rating__star" for="mood-2" aria-label="Сносно"></label>
+					<input class="rating__input" id="mood-3" type="radio" name="mood" value="3" checked=""/>
+					<label class="rating__star" for="mood-3" aria-label="Нормально"></label>
+					<input class="rating__input" id="mood-4" type="radio" name="mood" value="4"/>
+					<label class="rating__star" for="mood-4" aria-label="Хорошо"></label>
+					<input class="rating__input" id="mood-5" type="radio" name="mood" value="5"/>
+					<label class="rating__star" for="mood-5" aria-label="Отлично"></label>
+					<div class="rating__focus"></div>
+				</div>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__row row">
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Достоинства</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Опишите достоинства"></textarea>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Недостатки</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Опишите недостатки"></textarea>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="form-wrap__col col-12">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Общее впечатление</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше общее впечатление"></textarea>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше имя"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваш телефон"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Ваша электронная почта"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-auto">
+							<button class="form-wrap__btn btn btn-primary" type="submit">отправить
+							</button>
+						</div>
+						<div class="form-wrap__col-text col-lg">
+							<div class="policy policy--mh0">
+								<div class="p-txt">
+									<svg class="icon icon-lock ">
+										<use xlink:href="img/svg/sprite.svg#lock"></use>
+									</svg>Мы безопасно храним данные и никому их не передаём, вот
+									 <a class="btn-link" href="#">условия.</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 		<!-- end modals-->
 		<script src="libs/aos/aos.js"></script>
 		<script type="module" src="js/common.js"></script>
