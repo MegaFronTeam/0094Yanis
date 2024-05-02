@@ -210,6 +210,19 @@ function eventHandler() {
     }
 	});
 
+  $(".cart-btn-js").click(function () {
+    event.preventDefault();
+    $(this).toggleClass("active");
+    $(this).closest(".actions-col--js").toggleClass("active");
+    $(this).closest(".hint-col-js").toggleClass("active"); //tippy update
+
+    /*if (tippyInstance) {
+      for (let item of tippyInstance) {
+        item.setProps(tippySettings);
+      }
+    }*/
+  });
+
   const wrapper = document.querySelector('.main-wrapper')
   wrapper.classList.remove('wrapper-hidden')
 

@@ -45,7 +45,6 @@
 
   a {
     color: $gray-600;
-    background: $dark;
     @include media-breakpoint-up(md) {
       padding-left: rem(25);
     }
@@ -53,6 +52,7 @@
 
   &__link {
     position: relative;
+    background: $dark;
     top: rem(7);
     &:hover {
       color: $primary;
@@ -118,8 +118,8 @@
 
 
 .familiar-prod-item {
-  padding: rem(30);
-  padding-bottom: rem(20);
+  padding: rem(20);
+  padding-bottom: rem(10);
   background: $gray-800;
   border-radius: rem(15);
   min-height: 100%;
@@ -127,6 +127,12 @@
   flex-direction: column;
   justify-content: space-between;
   gap: rem(30);
+  overflow: hidden;
+  cursor: pointer;
+	@include media-breakpoint-up(md) {
+    padding: rem(30);
+    padding-bottom: rem(20);
+  }
 
   .bg-wrap {
     max-width: 90%;
@@ -139,10 +145,198 @@
   p {
     margin-top: rem(16);
   }
+  .price {
+    white-space: nowrap;
+  }
 
   .price_old {
     text-decoration: line-through;
+    color: $gray-720;
   }
+
+  &__foot-row {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    // width: 100%;
+    & > .price-col {
+      width: 100%;
+      flex: 0 0 auto;
+      text-align: center;
+      @include mt;
+    }
+  }
+
+  &:hover &__foot-row {
+    & > .price-col {
+      width: 0;
+    }
+
+    & > .actions-col {
+      &:after{
+        opacity: 0;
+      }
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @include media-breakpoint-down(lg) {
+      &__foot-row {
+      & > .price-col {
+        width: 0;
+      }
+
+      & > .actions-col {
+        &:after{
+          opacity: 0;
+        }
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__n-action{
+    width: rem(36);
+    height: rem(36);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+    svg,
+    .icon{
+      font-size: rem(32);
+      stroke: currentColor;
+      fill: none;
+    }
+    &:hover{
+      color: var(--bs-primary);
+    }
+    &.active{
+      color: var(--bs-primary);
+      .icon{
+        fill: currentColor;
+      }
+    }
+
+    svg {
+      // @include mt;
+      min-width: rem(24px);
+      [fill="#E42D24"] {
+
+        fill: currentColor !important;
+      }
+      [stroke="#E42D24"]{
+        stroke: currentColor !important;
+      }
+      &.like-icon{
+        stroke: currentColor !important;
+        fill: none !important;
+        stroke-width: 1px;
+        position: relative;
+      }
+    }
+    &:hover, &.active {
+      color: var(--bs-primary);
+      svg{
+
+      }
+    }
+    &.active{
+      .like-icon{
+        fill:  currentColor !important;
+      }
+      &.js-compare-ajax-btn svg{
+        fill:  currentColor !important;
+      }
+    }
+    img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    img:nth-child(1){opacity: 1;}
+    img:nth-child(2){opacity: 0;}
+    img:nth-child(3){opacity: 0;}
+    &:hover{
+      img:nth-child(1){opacity: 0;}
+      img:nth-child(2){opacity: 1;}
+      img:nth-child(3){opacity: 0;}
+    }
+    &.active{
+      img:nth-child(1){opacity: 0!important;}
+      img:nth-child(2){opacity: 0!important;}
+      img:nth-child(3){opacity: 1!important;}
+    }
+  }
+
+  &__n-cart-btn {
+    background-color: $primary;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 2.25rem;
+    justify-content: center;
+    position: relative;
+    width: 2.25rem;
+    z-index: 1;
+
+    img {
+      height: auto;
+      left: 50%;
+      max-height: 1.5rem;
+      max-width: 1.5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: auto;
+    }
+
+    img:first-child {
+      opacity: 1;
+    }
+    img:last-child {
+      opacity: 0;
+    }
+  }
+}
+
+
+.actions-col {
+  position: relative;
+  z-index: 1;
+  --s: 0.36s;
+  transform: translateX(rem(15));
+  transition: all var(--s) ease-in-out;
+  width: auto;
+  .row {
+    --bs-gutter-x: 0;
+  }
+  &:after{
+    @include mt;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 3px;
+    height: 100%;
+    background-color: $primary;
+  }
+}
+
+.familiar-prod-item:hover .familiar-prod-item__foot-row>.actions-col {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .arrow2-prev,

@@ -516,17 +516,24 @@
   &__tag {
     display: flex;
     gap: rem(8);
+		align-items: center;
     font-family: 'open sans';
-    // color: $gray-400;
+		position: relative;
+    &:hover{
+			color: var(--bs-primary);
+			--d: block;
+			//	--icon-color: #{var(--bs-primary)};
+		}
   }
   &__share-toggle {
 		display: flex;
 		align-items: center;
 		cursor: pointer;
+    gap: rem(8);
 	}
 	&__share-dropdown {
-		display: none;
-		background-color: #fff;
+		display: var(--d, none);
+		background-color: $gray-800;
 		top: 100%;
     color: $gray-400;
 		//left: 0;
@@ -542,8 +549,11 @@
 
 .payment {
   &__item {
+    display: flex;
+    gap: rem(10);
+    align-items: center;
     img {
-      margin-right: rem(10);
+      margin-top: rem(-2);
     }
   }
   &__col:not(:last-child) {

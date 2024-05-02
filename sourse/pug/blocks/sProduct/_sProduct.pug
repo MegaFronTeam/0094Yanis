@@ -163,22 +163,22 @@ mixin sProduct4(data)
 							+e.col.col-md-auto
 								+e.item
 									+img('img/svg/payment-1.svg')
-									| Рассрочка/кредит
+									+e.text Рассрочка/кредит
 							+e.col.col-md-auto
 								+e.item
 									+img('img/svg/payment-2.svg')
-									| Рассрочка/кредит
+									+e.text Рассрочка/кредит
 							+e.col.col-md-auto
 								+e.item
 									+img('img/svg/payment-3.svg')
-									| Оплата по QR
+									+e.text Оплата по QR
 					+b.payment.descr
 						+e.item
 							+img('img/svg/delivery.svg')
-							| Доставка: бесплатно
+							+e.text Доставка: бесплатно
 						+e.item
 							+img('img/svg/house.svg')
-							| Самовывоз: сегодня, бесплатно
+							+e.text Самовывоз: сегодня, бесплатно
 					.wrapper
 						+e.all-characteristics(href='#')
 							| Все характеристики
