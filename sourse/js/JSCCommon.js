@@ -5,7 +5,7 @@
 // import {Fancybox} from "../libs/@fancyapps/ui/fancybox/fancybox.esm.js";
 // import Inputmask from "../libs/inputmask/inputmask.es6.js";
 
-export default class JSCCommon {
+class JSCCommon {
 	static toggleClass(elements, className) {
 		elements.forEach(el => el.classList.toggle(className));
 	}
@@ -52,19 +52,19 @@ export default class JSCCommon {
 				Fancybox.close();
 			});
 		});
-    
-    Fancybox.bind(".sProduct__s-img[data-fancybox]", {
-      Toolbar: false,
 
-      // Carousel: {
-      //   Navigation: {
-      //     prevTpl:
-      //       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 5l-7 7 7 7"/><path d="M4 12h16"/></svg>',
-      //     nextTpl:
-      //       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M13 5l7 7-7 7"/></svg>',
-      //   },
-      // },
-    });
+		Fancybox.bind(".sProduct__s-img[data-fancybox]", {
+			Toolbar: false,
+
+			// Carousel: {
+			//   Navigation: {
+			//     prevTpl:
+			//       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 5l-7 7 7 7"/><path d="M4 12h16"/></svg>',
+			//     nextTpl:
+			//       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M13 5l7 7-7 7"/></svg>',
+			//   },
+			// },
+		});
 
 		document.addEventListener("click", event => {
 			let element = event.target.closest(link);
@@ -426,11 +426,11 @@ export default class JSCCommon {
 
 	static init() {
 		this.modalCall();
-		this.tabsCostume('tabs');
+		this.tabsCostume("tabs");
 		this.mobileMenu();
 		this.inputMask();
 		// this.sendForm();
-    
+
 		this.heightWindow();
 		this.makeDDGroup();
 		this.disabledBtn();
